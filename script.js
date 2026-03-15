@@ -8,13 +8,13 @@ function nextStep() {
     }
 
     currentStep++;
+    updateProgress();
 
     if (currentStep <= totalSteps) {
         const nextStepEl = document.querySelector(`.quiz-step[data-step="${currentStep}"]`);
         if (nextStepEl) {
             nextStepEl.classList.add('active');
         }
-        updateProgress();
     } else {
         showCalculating();
     }
@@ -26,11 +26,16 @@ function updateProgress() {
 }
 
 function showCalculating() {
-    document.getElementById('progress').style.width = '100%';
     document.getElementById('calculating').classList.add('active');
     
     // Simular processamento para parecer "real"
-    setTimeout(() => {
-        window.location.href = 'sales.html';
-    }, 2500);
+    let percent = 0;
+    const interval = setInterval(() => {
+        percent += 10;
+        if (percent > 100) {
+            clearInterval(interval);
+            window.location.href = 'sales.html';
+        }
+    }, 200);
 }
+
