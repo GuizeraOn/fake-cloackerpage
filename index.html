@@ -3,88 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evaluación de Salud Auditiva - Test Gratuito</title>
+    <title>Evaluación de Salud Auditiva | Centro de Salud Natural</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" style="min-height: 100vh; display: flex; flex-direction: column;">
         <header>
-            <div style="font-weight: bold; color: var(--primary-color); font-size: 24px;">Centro de Salud Auditiva Natural</div>
+            <div class="logo-text">Centro de Salud Auditiva Natural</div>
         </header>
 
         <div class="headline-box">
-            <h1>¿Su Tinnitus es causado por mala circulación?</h1>
-            <p class="sub-headline">Responda estas 6 preguntas para descubrir si el problema es físico o vascular.</p>
+            <h1>Evaluación de Salud Vascular Auditiva</h1>
+            <p class="sub-headline">Responda estas 6 preguntas rápidas para determinar si su zumbido es de origen físico-circulatorio.</p>
         </div>
 
-        <div class="quiz-container">
-            <div class="progress-bar">
-                <div id="progress" class="progress-inner"></div>
+        <div class="quiz-container" style="flex-grow: 1;">
+            <div class="progress-wrapper">
+                <div class="progress-bar">
+                    <div id="progress" class="progress-inner"></div>
+                </div>
+                <p style="text-align: right; font-size: 14px; margin-top: 10px; color: var(--text-light);">Progreso de la Evaluación</p>
             </div>
 
             <div id="quiz">
                 <!-- Pregunta 1 -->
                 <div class="quiz-step active" data-step="1">
-                    <p class="question">1. ¿Siente que sus manos o pies se enfrían con facilidad durante el día?</p>
-                    <div class="options">
-                        <button class="btn-option" onclick="nextStep()">Sí, casi siempre</button>
-                        <button class="btn-option" onclick="nextStep()">No, nunca lo he notado</button>
+                    <p class="question">1. ¿Sientes que tus extremidades (manos o pies) se enfrían con facilidad durante el día?</p>
+                    <div class="options-grid">
+                        <button class="btn-option" onclick="nextStep()">Sí, frecuentemente</button>
+                        <button class="btn-option" onclick="nextStep()">No, rara vez</button>
                     </div>
                 </div>
 
                 <!-- Pregunta 2 -->
                 <div class="quiz-step" data-step="2">
-                    <p class="question">2. ¿Cuántas tazas de café consume al día?</p>
-                    <div class="options">
-                        <button class="btn-option" onclick="nextStep()">1 a 2 tazas</button>
-                        <button class="btn-option" onclick="nextStep()">Más de 4 tazas</button>
+                    <p class="question">2. ¿Cuál es su consumo promedio de cafeína (café, té, bebidas energéticas)?</p>
+                    <div class="options-grid">
+                        <button class="btn-option" onclick="nextStep()">Moderado (1-2 tazas)</button>
+                        <button class="btn-option" onclick="nextStep()">Alto (más de 3 tazas)</button>
                         <button class="btn-option" onclick="nextStep()">No consumo cafeína</button>
                     </div>
                 </div>
 
                 <!-- Pregunta 3 -->
                 <div class="quiz-step" data-step="3">
-                    <p class="question">3. ¿Siente uma pulsación en el oído que sigue el ritmo de su corazón?</p>
-                    <div class="options">
-                        <button class="btn-option" onclick="nextStep()">Sí, a veces</button>
-                        <button class="btn-option" onclick="nextStep()">No, es um sonido constante</button>
+                    <p class="question">3. ¿El sonido que escucha sigue el ritmo de los latidos de su corazón?</p>
+                    <div class="options-grid">
+                        <button class="btn-option" onclick="nextStep()">Sí, es un pulso</button>
+                        <button class="btn-option" onclick="nextStep()">No, es un tono constante</button>
                     </div>
                 </div>
 
                 <!-- Pregunta 4 -->
                 <div class="quiz-step" data-step="4">
-                    <p class="question">4. ¿Tiene antecedentes de presión alta en su familia?</p>
-                    <div class="options">
-                        <button class="btn-option" onclick="nextStep()">Sí</button>
-                        <button class="btn-option" onclick="nextStep()">No</button>
+                    <p class="question">4. ¿Tiene antecedentes de hipertensión o problemas arteriales en su familia?</p>
+                    <div class="options-grid">
+                        <button class="btn-option" onclick="nextStep()">Sí, existen antecedentes</button>
+                        <button class="btn-option" onclick="nextStep()">No, ninguno</button>
                     </div>
                 </div>
 
                 <!-- Pregunta 5 -->
                 <div class="quiz-step" data-step="5">
-                    <p class="question">5. ¿Con qué frecuencia hace ejercicio físico a la semana?</p>
-                    <div class="options">
-                        <button class="btn-option" onclick="nextStep()">Todos los días</button>
-                        <button class="btn-option" onclick="nextStep()">1 o 2 veces</button>
-                        <button class="btn-option" onclick="nextStep()">Casi nunca</button>
+                    <p class="question">5. ¿Con qué frecuencia realiza actividad física moderada (caminar, nadar, etc.)?</p>
+                    <div class="options-grid">
+                        <button class="btn-option" onclick="nextStep()">A diario</button>
+                        <button class="btn-option" onclick="nextStep()">1-2 veces por semana</button>
+                        <button class="btn-option" onclick="nextStep()">Rara vez o nunca</button>
                     </div>
                 </div>
 
                 <!-- Pregunta 6 -->
                 <div class="quiz-step" data-step="6">
-                    <p class="question">6. ¿Siente que el zumbido empeora después de comer comidas muy saladas?</p>
-                    <div class="options">
+                    <p class="question">6. ¿Ha notado que el zumbido aumenta después de ingerir comidas con alto contenido de sodio (sal)?</p>
+                    <div class="options-grid">
                         <button class="btn-option" onclick="nextStep()">Sí, definitivamente</button>
-                        <button class="btn-option" onclick="nextStep()">No he notado diferencia</button>
+                        <button class="btn-option" onclick="nextStep()">No he notado cambios</button>
                     </div>
                 </div>
 
                 <!-- Analizando resultados -->
                 <div class="quiz-step" id="calculating">
                     <div style="text-align: center; padding: 40px;">
-                        <h2 style="border: none;">Analizando su perfil vascular...</h2>
-                        <p>Por favor espere mientras nuestro sistema verifica sus respuestas.</p>
-                        <div style="margin: 20px auto; width: 50px; height: 50px; border: 5px solid #f3f3f3; border-top: 5px solid var(--primary-color); border-radius: 50%; animation: spin 1s linear infinite;"></div>
+                        <h2 style="margin-top: 0; color: var(--primary-color);">Analizando sus respuestas...</h2>
+                        <p>Nuestro algoritmo está verificando su perfil circulatorio para determinar la causa probable.</p>
+                        <div style="margin: 30px auto; width: 60px; height: 60px; border: 5px solid #f3f3f4; border-top: 5px solid var(--primary-color); border-radius: 50%; animation: spin 1s linear infinite;"></div>
                     </div>
                 </div>
             </div>
@@ -96,7 +99,7 @@
 
         <footer class="footer">
             <p>&copy; 2026 Centro de Salud Auditiva Natural. Todos los derechos reservados.</p>
-            <p>Aviso: Este test es informativo y no sustituye el diagnóstico médico.</p>
+            <p style="opacity: 0.6; font-size: 12px;">Descargo de responsabilidad: Esta evaluación es solo para fines educativos y no constituye un diagnóstico médico.</p>
         </footer>
     </div>
 
