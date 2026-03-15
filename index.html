@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Su Tinnitus es causado por mala circulación? - Test Gratuito</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>¿Su Tinnitus es causado por mala circulación?</h1>
+            <p>Tome este test de 30 segundos para descubrir el origen de su molestia.</p>
+        </header>
+
+        <div class="progress-bar">
+            <div id="progress" class="progress-inner"></div>
+        </div>
+
+        <div id="quiz">
+            <!-- Pregunta 1 -->
+            <div class="quiz-step active" data-step="1">
+                <p class="question">Pregunta 1: ¿Siente que sus manos o pies se enfrían con facilidad durante el día?</p>
+                <ul class="options">
+                    <li><button class="btn-option" onclick="nextStep()">Sí, casi siempre.</button></li>
+                    <li><button class="btn-option" onclick="nextStep()">No, nunca lo he notado.</button></li>
+                </ul>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="quiz-step" data-step="2">
+                <p class="question">Pregunta 2: ¿Cuántas tazas de café consume al día?</p>
+                <ul class="options">
+                    <li><button class="btn-option" onclick="nextStep()">1 a 2 tazas.</button></li>
+                    <li><button class="btn-option" onclick="nextStep()">Más de 4 tazas.</button></li>
+                    <li><button class="btn-option" onclick="nextStep()">No consumo cafeína.</button></li>
+                </ul>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="quiz-step" data-step="3">
+                <p class="question">Pregunta 3: ¿Siente una pulsación en el oído que sigue el ritmo de su corazón?</p>
+                <ul class="options">
+                    <li><button class="btn-option" onclick="nextStep()">Sí, a veces.</button></li>
+                    <li><button class="btn-option" onclick="nextStep()">No, es un sonido constante.</button></li>
+                </ul>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="quiz-step" data-step="4">
+                <p class="question">Pregunta 4: ¿Tiene antecedentes de presión alta en su familia?</p>
+                <ul class="options">
+                    <li><button class="btn-option" onclick="nextStep()">Sí.</button></li>
+                    <li><button class="btn-option" onclick="nextStep()">No.</button></li>
+                </ul>
+            </div>
+
+            <!-- Pregunta 5 -->
+            <div class="quiz-step" data-step="5">
+                <p class="question">Pregunta 5: ¿Con qué frequência hace ejercicio físico a la semana?</p>
+                <ul class="options">
+                    <li><button class="btn-option" onclick="nextStep()">Todos los días.</button></li>
+                    <li><button class="btn-option" onclick="nextStep()">1 o 2 veces.</button></li>
+                    <li><button class="btn-option" onclick="nextStep()">Casi nunca.</button></li>
+                </ul>
+            </div>
+
+            <!-- Pregunta 6 -->
+            <div class="quiz-step" data-step="6">
+                <p class="question">Pregunta 6: ¿Siente que el zumbido empeora después de comer comidas muy saladas?</p>
+                <ul class="options">
+                    <li><button class="btn-option" onclick="nextStep()">Sí, definitivamente.</button></li>
+                    <li><button class="btn-option" onclick="nextStep()">No he notado diferencia.</button></li>
+                </ul>
+            </div>
+
+            <!-- Analizando resultados -->
+            <div class="quiz-step" id="calculating">
+                <div style="text-align: center; padding: 40px;">
+                    <h2>Analizando sus respuestas...</h2>
+                    <p>Espere un momento, estamos verificando su perfil circulatorio.</p>
+                    <div class="loading-spinner"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-nav">
+            <p>&copy; 2026 Manual del Silencio Natural. Reservados todos los derechos.</p>
+            <p>Este test no sustituye el consejo médico profesional.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
